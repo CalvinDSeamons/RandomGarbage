@@ -116,12 +116,17 @@ def run_bot():
         for key in data:
             time.sleep(2)
             coords = data[key]
-            final_coor = setup_coor(int(coords[0][0]),int(coords[0][1]),int(coords[1][0]),int(coords[1][1]))
+            final_coor = setup_coor(int(coords[0][0]),
+                                    int(coords[0][1]),
+                                    int(coords[1][0]),
+                                    int(coords[1][1]))
+            
             mouse.position = (final_coor[0],final_coor[1])
             time.sleep(.2)
             mouse.press(Button.left)
             mouse.release(Button.left)
-            time.sleep(7)
+            sleepy = float(random.randint(700,900))/100
+            time.sleep(sleepy)
               
     
 
