@@ -108,8 +108,13 @@ def setup_coor(x1,y1,x2,y2):
 def run_bot():
     data = {}
     mouse = Controller()
-    with open('coordiante_file') as input_file:
-        data = json.load(input_file)
+    try:
+        with open('coordiante_file') as input_file:
+            data = json.load(input_file)
+
+    except FileNotFoundError:
+        print("coordinate_file not found")
+        exit(1)
 
     time_interval = []
     while True:
