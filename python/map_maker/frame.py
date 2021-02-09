@@ -1,36 +1,33 @@
-from tkinter import Tk, Canvas, Frame, BOTH
+import tkinter as tk
+import random
 import argparse
 
-class basic_frame(Frame):
-
-    def __init__(self):
-
-        super().__init__()
-        self.initUI()
-
-    def initUI(self):
-
-        self.master.title("Colours")
-        self.pack(fill=BOTH, expand=1)
-        canvas = Canvas(self)
-        #canvas.create_rectangle(30, 10, 120, 80, outline="#fb0", fill="#fb0")
-        #canvas.create_rectangle(150, 10, 240, 80, outline="#f50", fill="#f50")
-        #canvas.create_rectangle(270, 10, 370, 80, outline="#05f", fill="#05f")
-        canvas.pack(fill=BOTH, expand=1)
-
 def main():
+    base_width=800
+    base_height=400
 
-    print("Welcome to mapmaker-0.0")
-    root = Tk()
-    test = basic_frame() 
-    #buttonBG = root.canvas.create_rectangle(0, 0, 100, 30, fill="grey40", outline="grey60")
-    #buttonTXT = canvas.create_text(50, 15, text="click")
-    #canvas.tag_bind(buttonBG, "<Button-1>", clicked) ## when the square is clicked runs function "clicked".
-    #canvas.tag_bind(buttonTXT, "<Button-1>", clicked) ## same, but for the text.
-    root.mainloop()
+    base_frame = tk.Tk()
 
+    #base_frame.sizemins(base_width,base_height)
 
-if __name__ == '__main__':
-   main()
+    label = tk.Label(
+        text="Stupid Ugly Map Maker 0.0.1",
+        fg="red",
+        bg="black",
+        width=base_width,
+        height=20
+    )
 
+    button = tk.Button(
+        text="Click me!",
+        width=base_width,
+        height=5,
+        bg="gray",
+        fg="black",
+    )
+    label.pack()
+    #button.pack()
+
+    base_frame.mainloop()
+main()
 
