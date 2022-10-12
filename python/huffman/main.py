@@ -39,7 +39,7 @@ class Node:
 def build_encode_table(tree, f_table):
 
     e_table = {}
-
+    # added git test to check cont.
 
 
 def get_frequency(message):
