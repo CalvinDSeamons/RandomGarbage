@@ -44,8 +44,8 @@ if __name__ == '__main__':
     print("Switch to Messages window. Starting in 5 seconds...")
     time.sleep(5)
 
-    key = '95468401-5567-452E-A56B-E6255C34F7C9'
-    phrase = ("MD5-Hashing: " +"["+key+"]")
+    #key = '95468401-5567-452E-A56B-E6255C34F7C9'
+    #phrase = ("MD5-Hashing: " +"["+key+"]")
     pyautogui.typewrite(phrase)
     pyautogui.press('enter')
     time.sleep(2)
